@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
 <title>Quantum Simulation Lab — Where "Impossible" Takes 3 Minutes</title>
 <meta name="description" content="A student-managed, university-based Quantum Simulation Lab. Train, build, and master quantum computing — our proposal to make it real.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -13,7 +14,7 @@
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- ===== NAVBAR (light) ===== -->
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
     <a href="#hero" class="brand">
@@ -28,7 +29,8 @@
       <a href="#plan">The Plan</a>
       <a href="#budget">Budget</a>
       <a href="#team">Team</a>
-      <a href="#invest" class="nav-cta">Invest in Us</a>
+      <a href="#invest" class="btn btn-outline btn-sm">Get in Touch</a>
+      <a href="#invest" class="btn btn-primary btn-sm">Invest in Us</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -36,7 +38,7 @@
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- ===== HERO (dark image, like reference) ===== -->
 <section class="hero" id="hero">
   <div class="hero-bg"><div class="hero-shade"></div><div class="hero-glow"></div></div>
   <div class="particles" id="particles" aria-hidden="true"></div>
@@ -44,26 +46,33 @@
     <span class="hero-badge reveal">STUDENT-MANAGED · UNIVERSITY-BASED · 2026</span>
     <h1 class="reveal delay-1">QUANTUM<br>SIMULATION LAB</h1>
     <p class="hero-tagline reveal delay-2">where <em>"impossible"</em> takes <b>3 minutes…</b></p>
-    <p class="hero-sub reveal delay-3">A student-run lab to train, build, and master quantum computing — our proposal to make it a reality on the ground.</p>
+    <p class="hero-sub reveal delay-3">The student-led Quantum simulation lab — bridging the gap in advanced computing education at Suez by building an accessible, student-driven simulation environment.</p>
     <div class="hero-ctas reveal delay-4">
       <a href="#story" class="btn btn-primary">Explore the Project</a>
       <a href="#team" class="btn btn-ghost">Meet the Team</a>
     </div>
-    <div class="hero-stats reveal delay-5">
-      <div class="stat"><b class="counter" data-target="1000000" data-suffix="+">0</b><span>possible combinations</span></div>
-      <div class="stat"><b class="counter" data-target="10000">0</b><span>years — classical</span></div>
-      <div class="stat"><b class="counter" data-target="3">0</b><span>minutes — quantum</span></div>
-      <div class="stat"><b class="counter" data-target="50000" data-prefix="$">0</b><span>seed budget</span></div>
-    </div>
   </div>
-  <a href="#story" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+  <a href="#numbers" class="scroll-hint" aria-label="Scroll down"><span></span></a>
 </section>
 
-<!-- ===== STORY ===== -->
-<section class="section section-dark" id="story">
+<!-- ===== STATS STRIP (light, like reference) ===== -->
+<section class="stats-strip" id="numbers">
+  <div class="container">
+    <p class="strip-line reveal">The quantum race is on — and our campus deserves a seat at the table.</p>
+    <div class="strip-grid">
+      <div class="strip-stat reveal"><b class="counter" data-target="1000000" data-suffix="+">0</b><span>possible combinations</span></div>
+      <div class="strip-stat reveal delay-1"><b class="counter" data-target="10000">0</b><span>years — classical machines</span></div>
+      <div class="strip-stat reveal delay-2"><b class="counter" data-target="3">0</b><span>minutes — quantum</span></div>
+      <div class="strip-stat reveal delay-3"><b class="counter" data-target="50000" data-prefix="$">0</b><span>seed budget — the ask</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY + THE WALL (light) ===== -->
+<section class="section section-tint" id="story">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">// SECTION 01 · OPENING</span>
+      <span class="kicker">// THE OPENING</span>
       <h2>THE PERFECT MEAL —<br><span class="accent">A STORY IN FOUR COURSES</span></h2>
     </div>
     <div class="story-grid">
@@ -86,43 +95,39 @@
         </div>
       </div>
     </div>
+
+    <div class="wall-block">
+      <div class="section-head center reveal">
+        <h2 class="dark-h">WHAT IF "IMPOSSIBLE"… <span class="accent">ONLY TOOK 3 MINUTES?</span></h2>
+      </div>
+      <div class="versus">
+        <div class="v-card reveal">
+          <span class="v-label">A SUPERCOMPUTER</span>
+          <div class="v-num"><b class="counter" data-target="10000">0</b></div>
+          <span class="v-unit">YEARS</span>
+          <p>brute-force trial and error</p>
+          <div class="v-bar"><i class="v-classic"></i></div>
+        </div>
+        <div class="v-vs reveal delay-1">VS</div>
+        <div class="v-card v-quantum reveal delay-2">
+          <span class="v-label">A QUANTUM COMPUTER</span>
+          <div class="v-num"><b class="counter" data-target="3">0</b></div>
+          <span class="v-unit">MINUTES</span>
+          <p>every path explored — at once</p>
+          <div class="v-bar"><i class="v-q"></i></div>
+        </div>
+      </div>
+      <p class="section-note reveal">Quantum technology isn't just shaping the future — <b>it IS the future.</b></p>
+    </div>
   </div>
 </section>
 
-<!-- ===== THE WALL (comparison) ===== -->
-<section class="section section-darker" id="wall">
+<!-- ===== THE 3 GAPS (white) ===== -->
+<section class="section section-white" id="gaps">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">// SECTION 01 · THE PROMISE</span>
-      <h2>WHAT IF "IMPOSSIBLE"… <span class="accent">ONLY TOOK 3 MINUTES?</span></h2>
-    </div>
-    <div class="versus">
-      <div class="v-card reveal">
-        <span class="v-label">A SUPERCOMPUTER</span>
-        <div class="v-num"><b class="counter" data-target="10000">0</b></div>
-        <span class="v-unit">YEARS</span>
-        <p>brute-force trial and error</p>
-        <div class="v-bar"><i class="v-classic"></i></div>
-      </div>
-      <div class="v-vs reveal delay-1">VS</div>
-      <div class="v-card v-quantum reveal delay-2">
-        <span class="v-label">A QUANTUM COMPUTER</span>
-        <div class="v-num"><b class="counter" data-target="3">0</b></div>
-        <span class="v-unit">MINUTES</span>
-        <p>every path explored — at once</p>
-        <div class="v-bar"><i class="v-q"></i></div>
-      </div>
-    </div>
-    <p class="section-note reveal">Quantum technology isn't just shaping the future — <b>it IS the future.</b></p>
-  </div>
-</section>
-
-<!-- ===== THE 3 GAPS ===== -->
-<section class="section section-light" id="gaps">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="kicker dark">// SECTION 02 · THE PROBLEM</span>
-      <h2 class="dark-h">OUR UNIVERSITY FACES<br><span class="accent-dark">THREE MAIN GAPS</span></h2>
+      <span class="kicker">// THE PROBLEM</span>
+      <h2>OUR UNIVERSITY FACES<br><span class="accent">THREE MAIN GAPS</span></h2>
       <p class="lead">Classical computers hit a wall — and that wall runs through our campus. Between our students and real quantum work: the machines, the method, the space.</p>
     </div>
     <div class="cards-3">
@@ -157,18 +162,18 @@
   </div>
 </section>
 
-<!-- ===== THE PLAN / 3 STEPS ===== -->
-<section class="section section-dark" id="plan">
+<!-- ===== THE PLAN / 3 STEPS (light) ===== -->
+<section class="section section-tint" id="plan">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">// SECTION 03 · METHODOLOGY</span>
-      <h2>THREE STEPS. <span class="accent">ONE QUANTUM LAB.</span></h2>
-      <p class="lead light-lead">A real quantum computer costs millions and needs extreme cooling. Here is our three-step path to the closest version of one — right here on campus.</p>
+      <span class="kicker">// THE METHODOLOGY</span>
+      <h2>EVERYTHING WE NEED<br><span class="accent">TO SUCCEED</span></h2>
+      <p class="lead">A real quantum computer costs millions and needs extreme cooling. Here is our three-step path to the closest version of one — right here on campus.</p>
     </div>
     <div class="steps">
       <article class="step-card reveal">
         <div class="step-top"><span class="step-num">01</span><span class="step-tag">→ real QPU access</span></div>
-        <h3>THE CLOUDS</h3>
+        <h3>Setup — The Clouds</h3>
         <p>Write quantum code locally, send it through the cloud — it runs on actual quantum processors miles away.</p>
         <ul class="stack-list">
           <li><b>IBM Quantum</b><span>pioneers — free education tier</span></li>
@@ -178,7 +183,7 @@
       </article>
       <article class="step-card reveal delay-1">
         <div class="step-top"><span class="step-num">02</span><span class="step-tag">→ simulate &amp; validate</span></div>
-        <h3>THE HARDWARE</h3>
+        <h3>Training — The Hardware</h3>
         <p>GPU workstations with enough RAM run full quantum simulations locally — a proof of concept before a single second of real quantum time.</p>
         <div class="mini-terminal">
           <div class="term-bar"><i></i><i></i><i></i><span>lab-node — zsh</span></div>
@@ -191,7 +196,7 @@
       </article>
       <article class="step-card reveal delay-2">
         <div class="step-top"><span class="step-num">03</span><span class="step-tag">→ industry SDKs</span></div>
-        <h3>THE SOFTWARE</h3>
+        <h3>Projects — The Software</h3>
         <p>Same tools, same docs — same jobs. The open-source, industry-standard stack trains students on what the industry already runs.</p>
         <ul class="stack-list">
           <li><b>Qiskit</b><span>IBM — the circuit standard</span></li>
@@ -200,22 +205,15 @@
         </ul>
       </article>
     </div>
-    <div class="plan-strip reveal">
-      <img src="assets/quantum-core.jpg" alt="Quantum computer core" loading="lazy">
-      <div class="plan-strip-text">
-        <h4>THIS IS HOW THE LAB COMES TRUE.</h4>
-        <p>clouds · benches · code — the recipe, end to end.</p>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ===== BUDGET ===== -->
-<section class="section section-light" id="budget">
+<!-- ===== BUDGET (white) ===== -->
+<section class="section section-white" id="budget">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker dark">// SECTION 04 · THE BUDGET</span>
-      <h2 class="dark-h">ONE ASK. <span class="accent-dark">THREE JOBS.</span></h2>
+      <span class="kicker">// THE BUDGET</span>
+      <h2>ONE ASK. <span class="accent">THREE JOBS.</span></h2>
       <p class="lead"><b>$50,000</b> total seed budget · 2-year runway — quantum time from the cloud, machines for the lab, and the people who make it all run. <b>Every dollar has a job.</b></p>
     </div>
     <div class="budget-rows">
@@ -238,7 +236,7 @@
   </div>
 </section>
 
-<!-- ===== GOALS ===== -->
+<!-- ===== GOALS BANNER (image overlay, like reference) ===== -->
 <section class="section goals" id="goals">
   <div class="container">
     <h2 class="reveal">WHAT OUR GOALS ARE</h2>
@@ -250,11 +248,48 @@
   </div>
 </section>
 
-<!-- ===== WHY INVEST ===== -->
-<section class="section section-dark" id="why">
+<!-- ===== ABOUT / TEAM (white, like reference) ===== -->
+<section class="section section-white" id="team">
+  <div class="who">
+    <div class="who-img reveal">
+      <img src="assets/quantum-core.jpg" alt="Inside the quantum lab core" loading="lazy">
+    </div>
+    <div class="who-text reveal delay-1">
+      <span class="kicker">About us — who we are</span>
+      <h2>THE STUDENTS<br><span class="accent">BEHIND THE LAB</span></h2>
+      <p class="who-lead">Faculty of Computers &amp; Artificial Intelligence — Suez University.</p>
+      <p>We are computer science students building a modern, student-managed Quantum Simulation Lab — bringing practical quantum computing and advanced tech closer to our student community.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-head team-head reveal">
+      <span class="kicker">// MEET THE HOSTS</span>
+      <h2>THE STORY BEGINS <span class="accent">WITH THIRTEEN VOICES</span></h2>
+      <p class="lead">The students behind the lab — storytellers, analysts, builders, and guardians of the mission.</p>
+    </div>
+    <div class="team-grid">
+      <div class="member reveal"><b>Ali Mahmoud</b><span>The Storyteller</span></div>
+      <div class="member reveal"><b>Salma Mohamed Ghoniem</b><span>The Reveal</span></div>
+      <div class="member reveal"><b>Mohammed Raafat</b><span>The Analyst</span></div>
+      <div class="member reveal"><b>Sara Emad Hassan</b><span>The Opener</span></div>
+      <div class="member reveal"><b>Basmala Ahmed</b><span>The Builder</span></div>
+      <div class="member reveal"><b>Mohamed Mahmoud</b><span>The Stacker</span></div>
+      <div class="member reveal"><b>Hamed</b><span>The Visionary</span></div>
+      <div class="member reveal"><b>Youssef Mohammed Eldabaa</b><span>The Banker</span></div>
+      <div class="member reveal"><b>Malak Asaad</b><span>The Guardian</span></div>
+      <div class="member reveal"><b>Menna Osama</b><span>The Sustainer</span></div>
+      <div class="member reveal"><b>Shahenda Ahmed</b><span>The Closer</span></div>
+      <div class="member reveal"><b>Somaia Adel</b><span>The Guide</span></div>
+      <div class="member reveal"><b>Elsayed Ramadan Labib</b><span>The Hero</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY INVEST (light) ===== -->
+<section class="section section-tint" id="why">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">// SECTION 06 · THE RETURN</span>
+      <span class="kicker">// THE RETURN</span>
       <h2>WHY YOU SHOULD <span class="accent">INVEST TODAY</span></h2>
     </div>
     <div class="cards-4">
@@ -282,42 +317,12 @@
   </div>
 </section>
 
-<!-- ===== TEAM ===== -->
-<section class="section section-darker" id="team">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="kicker">// MEET THE HOSTS</span>
-      <h2>THE STORY BEGINS <span class="accent">WITH THIRTEEN VOICES</span></h2>
-      <p class="lead light-lead">The students behind the lab — storytellers, analysts, builders, and guardians of the mission.</p>
-    </div>
-    <div class="team-grid">
-      <div class="member reveal"><b>Ali Mahmoud</b><span>The Storyteller</span></div>
-      <div class="member reveal"><b>Salma Mohamed Ghoniem</b><span>The Reveal</span></div>
-      <div class="member reveal"><b>Mohammed Raafat</b><span>The Analyst</span></div>
-      <div class="member reveal"><b>Sara Emad Hassan</b><span>The Opener</span></div>
-      <div class="member reveal"><b>Basmala Ahmed</b><span>The Builder</span></div>
-      <div class="member reveal"><b>Mohamed Mahmoud</b><span>The Stacker</span></div>
-      <div class="member reveal"><b>Hamed</b><span>The Visionary</span></div>
-      <div class="member reveal"><b>Youssef Mohammed Eldabaa</b><span>The Banker</span></div>
-      <div class="member reveal"><b>Malak Asaad</b><span>The Guardian</span></div>
-      <div class="member reveal"><b>Menna Osama</b><span>The Sustainer</span></div>
-      <div class="member reveal"><b>Shahenda Ahmed</b><span>The Closer</span></div>
-      <div class="member reveal"><b>Somaia Adel</b><span>The Guide</span></div>
-      <div class="member reveal"><b>Elsayed Ramadan Labib</b><span>The Hero</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== INVEST ===== -->
+<!-- ===== INVEST (teal, like reference) ===== -->
 <section class="section invest" id="invest">
-  <div class="container invest-inner">
-    <div class="invest-text reveal">
-      <span class="kicker">// SECTION 08 · THE ASK</span>
-      <h2>INVEST <span class="accent">IN US</span></h2>
-      <p>The ask is <b>$50,000</b> — a seed proposal to build a student-managed Quantum Simulation Lab. The race is active right now. Help us shape the future.</p>
-      <p class="invest-note">Fill out the form and you will be contacted.</p>
-    </div>
-    <form class="invest-form reveal delay-1" id="investForm" autocomplete="on">
+  <div class="container invest-wrap">
+    <h2 class="reveal">Invest in US.</h2>
+    <p class="invest-sub reveal delay-1">The ask is <b>$50,000</b> — a seed proposal to build a student-managed Quantum Simulation Lab.<br>Fill the data here and you will be contacted.</p>
+    <form class="invest-form reveal delay-2" id="investForm" autocomplete="on">
       <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" placeholder="ex. John" required></div>
       <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="ex. john@gmail.com" required></div>
       <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" placeholder="ex. +20 111 111 1111"></div>
@@ -328,7 +333,7 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER (light) ===== -->
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
@@ -338,6 +343,14 @@
       <div>
         <b>QUANTUM SIMULATION LAB</b>
         <span>Student-Managed · University-Based · 2026</span>
+      </div>
+    </div>
+    <div class="footer-right">
+      <a href="#hero" class="btn btn-outline btn-sm">Back to Top ↑</a>
+      <div class="socials">
+        <a href="#hero" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+        <a href="#hero" aria-label="X"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.7 3H21l-7.2 8.3L22.2 21h-6.6l-5.2-6.1L4.5 21H1.2l7.7-8.9L1.8 3h6.8l4.7 5.5L17.7 3zm-1.2 16h1.8L6.7 4.9H4.8L16.5 19z"/></svg></a>
+        <a href="#hero" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </div>
     <nav class="footer-links">
