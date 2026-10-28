@@ -213,6 +213,40 @@ section{position:relative}
 .thanks h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:700;letter-spacing:.02em}
 .thanks h2 span{color:#67e8f9}
 .thanks p{margin-top:16px;color:#c9dcf2;font-size:1.05rem}
+
+/* ---------- Quantum Maze game ---------- */
+.maze-wrap{max-width:720px;margin:0 auto}
+.maze-stage{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid #14203c;background:#0a1428;box-shadow:var(--shadow);display:flex;justify-content:center}
+#mazeCanvas{display:block}
+.maze-overlay{
+  position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:24px;color:#fff;background:rgba(6,12,28,.85);backdrop-filter:blur(4px);
+  opacity:0;pointer-events:none;transition:opacity .35s
+}
+.maze-overlay.show{opacity:1;pointer-events:auto}
+.maze-overlay h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;max-width:420px}
+.maze-overlay p{margin-top:12px;color:#c9dcf2;font-size:.98rem;max-width:460px;line-height:1.55}
+.maze-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;justify-content:center}
+.hud{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.hud-chip{
+  padding:9px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  font-size:.8rem;font-weight:600;letter-spacing:.08em;color:var(--muted)
+}
+.hud-chip b{font-family:'Space Grotesk',sans-serif;color:var(--text);margin-left:4px}
+.maze-controls{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.dpad{display:grid;grid-template-columns:repeat(3,58px);grid-auto-rows:58px;gap:10px;justify-content:center;margin-top:22px}
+.dp{
+  border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--navy);
+  font-size:1.05rem;cursor:pointer;box-shadow:0 6px 16px rgba(13,27,51,.08);
+  transition:transform .15s,box-shadow .15s,border-color .15s;touch-action:manipulation
+}
+.dp:hover{transform:translateY(-2px);border-color:var(--blue);box-shadow:0 12px 26px rgba(13,27,51,.14)}
+.dp:active{transform:translateY(1px) scale(.97)}
+.dp-up{grid-column:2;grid-row:1}
+.dp-left{grid-column:1;grid-row:2}
+.dp-down{grid-column:2;grid-row:2}
+.dp-right{grid-column:3;grid-row:2}
+.maze-caption{text-align:center;color:var(--muted);margin-top:16px;font-size:.95rem}
 .mini-terminal{
   margin-top:26px;border-radius:14px;overflow:hidden;
   border:1px solid #14203c;background:#040a15;box-shadow:var(--shadow);

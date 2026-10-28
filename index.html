@@ -97,6 +97,46 @@
   </div>
 </section>
 
+<!-- ===== THE QUANTUM MAZE (try it yourself) ===== -->
+<section class="section section-white" id="play">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">// TRY IT YOURSELF</span>
+      <h2>CAN YOU FIND <span class="accent">THE EXIT?</span></h2>
+      <p class="lead">This is how a classical machine thinks — one route at a time, and every wall means starting over. Reach the exit with the buttons… then let the quantum way finish the job.</p>
+    </div>
+    <div class="maze-wrap reveal">
+      <div class="maze-stage" id="mazeStage">
+        <canvas id="mazeCanvas" aria-label="Quantum maze game"></canvas>
+        <div class="maze-overlay" id="mazeOverlay">
+          <h3 id="mazeTitle"></h3>
+          <p id="mazeMsg"></p>
+          <div class="maze-actions">
+            <button class="btn btn-primary" id="mazeRetry">Retry</button>
+            <button class="btn btn-ghost" id="mazeQuantum">The Quantum Way</button>
+          </div>
+        </div>
+      </div>
+      <div class="hud">
+        <span class="hud-chip">MOVES <b id="hudMoves">0</b></span>
+        <span class="hud-chip">CRASHES <b id="hudCrashes">0</b></span>
+        <span class="hud-chip">TIME <b id="hudTime">0.0s</b></span>
+      </div>
+      <div class="maze-controls">
+        <button class="btn btn-outline btn-sm" id="mazeRestart">Restart</button>
+        <button class="btn btn-primary btn-sm" id="mazeQuantumBtn">Quantum Solve</button>
+      </div>
+      <div class="dpad" id="dpad">
+        <button class="dp dp-up" data-dir="up" aria-label="Move up">&#9650;</button>
+        <button class="dp dp-left" data-dir="left" aria-label="Move left">&#9664;</button>
+        <button class="dp dp-down" data-dir="down" aria-label="Move down">&#9660;</button>
+        <button class="dp dp-right" data-dir="right" aria-label="Move right">&#9654;</button>
+      </div>
+      <p class="maze-caption" id="mazeCaption">Arrow keys work too — one wrong move and you start over. That's trial and error.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== ABOUT — at the end: identity + goals ===== -->
 <section class="section section-tint" id="about">
   <div class="who">
@@ -172,5 +212,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/game.js"></script>
 </body>
 </html>
