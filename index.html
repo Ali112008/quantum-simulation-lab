@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -97,42 +97,108 @@
   </div>
 </section>
 
-<!-- ===== THE QUANTUM MAZE (try it yourself) ===== -->
+<!-- ===== QUANTUM PUZZLE (try it yourself) ===== -->
 <section class="section section-white" id="play">
   <div class="container">
     <div class="section-head center reveal">
       <span class="kicker">// TRY IT YOURSELF</span>
-      <h2>CAN YOU FIND <span class="accent">THE EXIT?</span></h2>
-      <p class="lead">This is how a classical machine thinks — one route at a time, and every wall means starting over. Reach the exit with the buttons… then let the quantum way finish the job.</p>
+      <h2>PIECE IT TOGETHER — <span class="accent">THE HARD WAY</span></h2>
+      <p class="lead">Rebuild the picture piece by piece, one swap at a time — that's how a classical machine thinks: try, check, try again. Solve it… then watch what a quantum computer does differently.</p>
     </div>
-    <div class="maze-wrap reveal">
-      <div class="maze-stage" id="mazeStage">
-        <canvas id="mazeCanvas" aria-label="Quantum maze game"></canvas>
-        <div class="maze-overlay" id="mazeOverlay">
-          <h3 id="mazeTitle"></h3>
-          <p id="mazeMsg"></p>
-          <div class="maze-actions">
-            <button class="btn btn-primary" id="mazeRetry">Retry</button>
-            <button class="btn btn-ghost" id="mazeQuantum">The Quantum Way</button>
+
+    <div class="puzzle-wrap reveal">
+      <div class="puzzle-board-card">
+        <div class="puzzle-stage" id="puzzleStage">
+          <div class="puzzle-board" id="puzzleBoard"></div>
+          <div class="puzzle-ghost" id="puzzleGhost"></div>
+          <div class="puzzle-overlay" id="puzzleOverlay">
+            <span class="pov-kicker">PUZZLE SOLVED</span>
+            <h3>You did it — the classical way.</h3>
+            <p class="pov-stats" id="povStats"></p>
+            <p class="pov-big" id="povCombos"></p>
+            <p class="pov-classical" id="povClassical"></p>
+            <p class="pov-quantum" id="povQuantum"></p>
+            <div class="pov-actions">
+              <button class="btn btn-primary" id="povAgain">Play Again</button>
+              <button class="btn btn-outline" id="povQuantumBtn">See the Quantum Solution</button>
+            </div>
+          </div>
+        </div>
+        <div class="puzzle-hud">
+          <span class="hud-chip">PIECES <b id="hudPieces">16</b></span>
+          <span class="hud-chip">MOVES <b id="hudMoves">0</b></span>
+          <span class="hud-chip">TIME <b id="hudTime">0:00</b></span>
+        </div>
+        <p class="puzzle-caption" id="puzzleCaption">Tap a piece, then tap another to swap them. Rebuild the picture.</p>
+      </div>
+
+      <aside class="puzzle-side">
+        <div class="side-block">
+          <h4>Grid Size</h4>
+          <div class="seg" id="sizeSeg">
+            <button type="button" data-n="3">3×3</button>
+            <button type="button" data-n="4" class="on">4×4</button>
+            <button type="button" data-n="5">5×5</button>
+          </div>
+          <p class="side-hint" id="sizeHint"></p>
+        </div>
+        <div class="side-block">
+          <h4>Picture</h4>
+          <div class="thumbs" id="imgThumbs"></div>
+        </div>
+        <div class="side-block side-actions">
+          <button class="btn btn-primary btn-full" id="puzShuffle">Shuffle &amp; Restart</button>
+          <button class="btn btn-outline btn-full" id="puzPeek">Peek at the Picture</button>
+          <button class="btn btn-outline btn-full" id="puzQuantum">Watch the Quantum Way</button>
+        </div>
+        <div class="side-note">
+          <b>Why this game?</b>
+          <p>A shuffled puzzle can be arranged in millions — or trillions — of wrong ways. You find the right one by trial and error, one swap at a time. A quantum computer holds <b>every arrangement at once</b> and collapses straight to the answer.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- the quantum race -->
+  <div class="qmodal" id="qModal" aria-hidden="true">
+    <div class="qmodal-backdrop" data-close></div>
+    <div class="qmodal-panel">
+      <button class="qmodal-x" data-close aria-label="Close">&#10005;</button>
+      <span class="kicker">// THE QUANTUM WAY</span>
+      <h3 class="race-title">One by one vs. all at once</h3>
+      <div class="race-grid">
+        <div class="race-card">
+          <div class="race-label">Classical computer</div>
+          <div class="race-stage">
+            <div class="race-board" id="raceClassical"></div>
+            <div class="race-tag" id="raceTagC"></div>
+          </div>
+          <div class="race-meta">
+            <span>Arrangements tried</span> <b id="raceTries">0</b>
+            <div class="race-bar"><i id="raceBar"></i></div>
+            <div class="race-sub" id="raceSubC"></div>
+          </div>
+        </div>
+        <div class="race-vs">VS</div>
+        <div class="race-card race-quantum">
+          <div class="race-label">Quantum computer</div>
+          <div class="race-stage">
+            <div class="race-board" id="raceQuantum"></div>
+            <div class="race-tag" id="raceTagQ"></div>
+          </div>
+          <div class="race-meta">
+            <span>Arrangements explored</span> <b id="raceQCount">all of them</b>
+            <div class="race-bar race-bar-q"><i id="raceBarQ"></i></div>
+            <div class="race-sub" id="raceSubQ"></div>
           </div>
         </div>
       </div>
-      <div class="hud">
-        <span class="hud-chip">MOVES <b id="hudMoves">0</b></span>
-        <span class="hud-chip">CRASHES <b id="hudCrashes">0</b></span>
-        <span class="hud-chip">TIME <b id="hudTime">0.0s</b></span>
+      <p class="race-punch" id="racePunch"></p>
+      <p class="race-foot">A simplified visualization of quantum parallelism — the idea behind Grover's search speed-up.</p>
+      <div class="race-actions">
+        <button class="btn btn-outline btn-sm" id="raceReplay">Replay the Race</button>
+        <button class="btn btn-primary btn-sm" data-close>Close</button>
       </div>
-      <div class="maze-controls">
-        <button class="btn btn-outline btn-sm" id="mazeRestart">Restart</button>
-        <button class="btn btn-primary btn-sm" id="mazeQuantumBtn">Quantum Solve</button>
-      </div>
-      <div class="dpad" id="dpad">
-        <button class="dp dp-up" data-dir="up" aria-label="Move up">&#9650;</button>
-        <button class="dp dp-left" data-dir="left" aria-label="Move left">&#9664;</button>
-        <button class="dp dp-down" data-dir="down" aria-label="Move down">&#9660;</button>
-        <button class="dp dp-right" data-dir="right" aria-label="Move right">&#9654;</button>
-      </div>
-      <p class="maze-caption" id="mazeCaption">Arrow keys work too — one wrong move and you start over. That's trial and error.</p>
     </div>
   </div>
 </section>
@@ -212,6 +278,6 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/game.js"></script>
+<script src="js/puzzle.js?v=8"></script>
 </body>
 </html>
