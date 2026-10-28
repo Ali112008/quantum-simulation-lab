@@ -207,6 +207,8 @@ section{position:relative}
   border:1px solid #bfdbfe;color:#1d4ed8;background:#eff6ff;margin:2px 0;
 }
 .op{color:var(--violet);font-weight:600;margin:0 4px}
+.goal-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.goal-chips .chip{padding:10px 24px;font-size:.95rem;font-weight:600;border-color:#a5e3f0;color:#0e7490;background:#ecfeff}
 .mini-terminal{
   margin-top:26px;border-radius:14px;overflow:hidden;
   border:1px solid #14203c;background:#040a15;box-shadow:var(--shadow);
