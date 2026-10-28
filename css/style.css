@@ -209,6 +209,10 @@ section{position:relative}
 .op{color:var(--violet);font-weight:600;margin:0 4px}
 .goal-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
 .goal-chips .chip{padding:10px 24px;font-size:.95rem;font-weight:600;border-color:#a5e3f0;color:#0e7490;background:#ecfeff}
+.thanks{background:linear-gradient(135deg,#151b4e 0%,#3a3fbe 100%);color:#fff;text-align:center;padding:120px 0}
+.thanks h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:700;letter-spacing:.02em}
+.thanks h2 span{color:#67e8f9}
+.thanks p{margin-top:16px;color:#c9dcf2;font-size:1.05rem}
 .mini-terminal{
   margin-top:26px;border-radius:14px;overflow:hidden;
   border:1px solid #14203c;background:#040a15;box-shadow:var(--shadow);
